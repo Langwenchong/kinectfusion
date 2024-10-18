@@ -1,0 +1,35 @@
+{
+  "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "preprocess (Debug)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "dataset.preprocess",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "--config","configs/fr1_xyz.yaml"
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "5",
+            }
+        },
+        {
+            "name": "kinfu (Debug)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "kinfu",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "--config","configs/fr1_xyz.yaml",
+                "--save_dir","reconstruct/fr1_xyz"
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "5",
+            }
+        },
+    ]
+}
